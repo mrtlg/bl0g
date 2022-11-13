@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://svelte-qwer.vercel.app/sitemap.xml
+Flag: ctf{send_me_this_for_1_follow_instagram}
