@@ -9,4 +9,4 @@ options:
 
 ![Aboutme_meme](https://media.tenor.com/JLiaIiilIWUAAAAC/hiding-into-bush.gif)
 
-Hello! I’m Tien Luong, this is my little blog and hope you guys like it, oh btw English is not my mother tongue so please excuse any errors on my part heart.
+Hello! I’m Tien Luong, this is my little blog and hope you guys like it, oh btw English is not my mother tongue so please excuse any errors on my part heart. pls hire me TvT
