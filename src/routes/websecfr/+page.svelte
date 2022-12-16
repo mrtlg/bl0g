@@ -115,7 +115,7 @@
     </p>
     <p>
       Ban đầu thấy biến <code class="inline-code-block">page</code>
-       tưởng chừng path travelsal nhưng ở bước include nó đã thêm .txt vào đuôi rồi nên ta không thể đi theo hướng này.
+       tưởng chừng path traversal nhưng ở bước include nó đã thêm .txt vào đuôi rồi nên ta không thể đi theo hướng này.
     </p>
     <p>Phân tích chỗ parse_url(), trước hết ta phải hiểu nó làm gì đã</p>
     <p>

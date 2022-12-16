@@ -14,7 +14,7 @@
     <p><ImgZoom src="https://media.tenor.com/JLiaIiilIWUAAAAC/hiding-into-bush.gif" alt="Aboutme_meme" /></p>
     <p>
       Hello! I’m Tien Luong, this is my little blog and hope you guys like it, oh btw English is not my mother tongue so
-      please excuse any errors on my part heart.
+      please excuse any errors on my part &lt;3.
     </p>
   </article>
 </Post>
