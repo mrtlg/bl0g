@@ -72,7 +72,7 @@ Access để xem có gì nào
 
 Yay đọc được etc/passwd, vậy là POC hoạt động mượt :))
 
-T `/app/index.js`:
+`/app/index.js`:
 
 ![image](https://user-images.githubusercontent.com/75429369/171825288-84d057cd-bf25-474d-95aa-f342540460cf.png)
 
