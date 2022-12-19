@@ -135,7 +135,8 @@ Yes, vậy có thể hình dung được ta sẽ dùng SECRET KEY này để gen
 
 ![image](https://user-images.githubusercontent.com/75429369/171844999-50237d26-eb74-47ba-9d44-03f8e9491f42.png)
 
-/app/routes/index.js
+`/app/routes/index.js`
+
 ```js
 const fs = require('fs'); 
 const path = require('path'); 
@@ -212,7 +213,8 @@ Lần đầu tiên trong bài, ta thấy sự hiện diện của `flag`, vậy 
 
 Tận dụng code có sẵn của bài, ta sẽ tự generate cookie session.sig ở local rồi sử dụng nó lên web chính thì sẽ lấy được flag. Script generate:
 
-script app.js
+`script app.js`
+
 ```js
 const express = require('express');
 const session = require('cookie-session');
