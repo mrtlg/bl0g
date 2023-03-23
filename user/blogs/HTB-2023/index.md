@@ -3,8 +3,8 @@ title: HackTheBox Apocalypse 2023
 description: HoxTheBack
 summary: Write up
 cover: ./cover.jpg
-published: '2023-23-03T20:00:00.000+07:00'
-updated: '2023-23-03T20:00:00.000+07:00'
+published: '2023-03-23T20:00:00.000+07:00'
+updated: '2023-03-23T20:00:00.000+07:00'
 toc: false
 tags:
   - [ ctf ]
