@@ -74,7 +74,7 @@ Ban đầu mình cũng cố gắng chắp vá payload bằng những cách thư�
 
 Sau một hồi thì mình có tham khảo được trang [này](https://niebardzo.github.io/2020-11-23-exploiting-jinja-ssti/)
 
-Đại khái ý tưởng ở đây sẽ là chèn một chuỗi với độ dài tuỳ thích vào một biến nào đó trong file `config`, sau đó ta sẽ `popen` tới nó để sử dụng. Mình test thử nhé. Đầu tiên ta sẽ lưu chuỗi như ý muốn vào `config.a`
+Đại khái ý tưởng ở đây sẽ là chèn một chuỗi với độ dài tuỳ thích vào `config`, sau đó ta sẽ `popen` tới nó để sử dụng. Mình test thử nhé. Đầu tiên ta sẽ lưu chuỗi như ý muốn vào `config.a`
 
 Ban đầu mình thử với payload sau nhưng không được
 
