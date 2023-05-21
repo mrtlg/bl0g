@@ -22,7 +22,7 @@ Tuần này mình cũng có một buổi tối hơi hơi rảnh nên vào chơi 
 
 ![image](https://github.com/mrtlg/bl0g/assets/110890291/1f80dcc9-5ac9-458c-9789-f26309ecd54a)
 
-Vậy có thể hình dung được là với bài này, mình chỉ cần làm sao cho web bung ra lỗi, vì debug on nên flask sẽ in ra các dòng code cũng như chỉ ra lỗi như nào như nào, khi các dòng code được in ra đồng nghĩa với việc mấy cái comment kia mình cũng thấy nên đọc được flag luôn :) -> tìm các chỗ có lỗi login hay có flaw sai là được. Dạng này thì không phải lần đầu mình gặp, nhưng mà trông khi làm sẽ không vui bằng exploit lỗ hổng thuần. Luyên thuyên đủ rồi, mình sẽ bắt tay vào tìm flag 1.
+Vậy có thể hình dung được là với bài này, mình chỉ cần làm sao cho web bung ra lỗi, vì debug on nên flask sẽ in ra các dòng code cũng như chỉ ra lỗi như nào như nào, khi các dòng code được in ra đồng nghĩa với việc mấy cái comment kia mình cũng thấy nên đọc được flag luôn :) -> tìm các chỗ có lỗi logic hay có flaw sai là được. Dạng này thì không phải lần đầu mình gặp, nhưng mà trông khi làm sẽ không vui bằng exploit lỗ hổng thuần. Luyên thuyên đủ rồi, mình sẽ bắt tay vào tìm flag 1.
 
 ## Flag 1
 
