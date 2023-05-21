@@ -248,10 +248,9 @@ Lúc này username ta bypass được chỗ kiểm tra độ dài là 4 và lưu
 
 ![image](https://github.com/mrtlg/bl0g/assets/110890291/c09d8ec3-b326-4ba2-b800-27b81442605f)
 
-
 # Notes
 
-Bài này cho source và một url tới admin bot và source của bot luôn -> client side. Cùng phân tích vài chỗ quan trọng trong source.
+Bài này cho source và một url tới admin bot và source của bot luôn -> client side, đây cũng là bài cuối của mảng Web. Cùng phân tích vài chỗ quan trọng trong source.
 
 ## `server.py`
 
@@ -397,7 +396,7 @@ Sau khi phân tích xong, bài này ta có thể dễ dàng biết được lỗ
 
 Tuy nhiên có một vấn đề, các input của form này sẽ như trên ta phân tích là `note_id` để chứa id của cái note flag có sẵn, `user` là user của account ta tạo; VÀ `csrf_token`, chính là cái sẽ hơi gây khó khăn cho ta.
 
-Đối với những bài mà kiểu notes vầy trong các event CTF khác, mình phải làm cách nào đó extract được csrf_token từ HTMl của web, hoặc tìm chỗ XSS để bypass CORS, vân vân mây mây. Nhưng với bài này thì đơn giản hơn nhiều, nhớ lại lúc nãy khi phân tích về cái list `csrf_token` kia, ta thấy được token sẽ được tạo và append thẳng vào list khi ta truy cập đến endpoint share, nhưng cái list này lại dùng chung cho cả app :D, tức là dù ta là user hay admin đều dùng chung cái list đấy :D, cho nên mình mới bảo bài này nó hơi đơn giản.
+Đối với những bài mà kiểu notes vầy trong các event CTF khác, mình phải làm cách nào đó extract được csrf_token từ HTMl của web, hoặc tìm chỗ XSS để bypass CORS, vân vân mây mây. Nhưng với bài này thì đơn giản hơn nhiều, nhớ lại lúc nãy khi phân tích về cái list `csrf_token` kia, ta thấy được token sẽ được tạo và append thẳng vào list khi ta truy cập đến endpoint share, nhưng cái list này lại dùng chung cho cả app :D, tức là dù ta là user hay admin đều dùng chung cái list đấy :D.
 
 Tóm lại những việc cần làm của mình để exploit bài này như sau
 
@@ -427,3 +426,5 @@ Tóm lại những việc cần làm của mình để exploit bài này như sa
 ![image](https://github.com/mrtlg/bl0g/assets/110890291/7c8fa350-ed04-4788-8d96-f43bd847a05e)
 
 ![image](https://github.com/mrtlg/bl0g/assets/110890291/51b4faa5-9a35-400c-8195-219c502750b0)
+
+> Hơi ngang ngang nhưng mà cảm ơn các bạn đã đọc đến đây <3
