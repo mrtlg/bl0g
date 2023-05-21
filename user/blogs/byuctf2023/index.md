@@ -20,9 +20,9 @@ Tuần này mình cũng có một buổi tối hơi hơi rảnh nên vào chơi 
 
 Đây là một bài viết bằng Flask có multi-flag, nghĩa là có nhiều chỗ để ta exploit, ban đầu mình cũng tưởng sẽ exploit kiểu theo các lỗ hổng thuần web thôi, nhưng khi đọc qua source thì bài này nó bật debug on, và các flag được ẩn trong các comment như này
 
-![](https://hackmd.io/_uploads/H1yNxEPS3.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/bcb9555d-59aa-4bc4-87da-3c5de3818022)
 
-![](https://hackmd.io/_uploads/HJIBxNDB3.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/da2cf726-ff84-4d11-8197-33c75161f4da)
 
 Vậy có thể hình dung được là với bài này, mình chỉ cần làm sao cho web bung ra lỗi, vì debug on nên flask sẽ in ra các dòng code cũng như chỉ ra lỗi như nào như nào, khi các dòng code được in ra đồng nghĩa với việc mấy cái comment kia mình cũng thấy nên đọc được flag luôn :) -> tìm các chỗ có lỗi login hay có flaw sai là được. Dạng này thì không phải lần đầu mình gặp, nhưng mà trông khi làm sẽ không vui bằng exploit lỗ hổng thuần. Luyên thuyên đủ rồi, mình sẽ bắt tay vào tìm flag 1.
 
@@ -110,7 +110,7 @@ CREATE TABLE User
 
 Đây là define của bảng User chứa thông tin user, dễ thấy bên dưới Email và username phải là Unique, xem lại đoạn python thì code không hề xử lí chỗ này, vậy ta chỉ cần đăng kí nick bị trùng email hoặc username với account khác là lỗi ngay
 
-![](https://hackmd.io/_uploads/SJmyXEvBn.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/6d89d761-930e-4a3a-91ba-03a62b362239)
 
 _Thấy fake flag do mình đang làm local, chả hiểu sao mấy bài khác thì chưa tắt mà bài này tắt rồi á_
 
@@ -164,7 +164,7 @@ CREATE TABLE Support_Tickets
 
 Đúng như mình nghĩ, description chỉ có độ dài 2048, vậy sẽ thế nào nếu mình nhập nhiều hơn
 
-![](https://hackmd.io/_uploads/HkOU4Vvrn.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/f7fdb701-2c6c-4cfc-a764-63aaadab7332)
 
 hớ hớ
 
@@ -236,17 +236,17 @@ Lần này flag không phải trong comment mà trong response của server luô
 
 Trong statement if kiểm tra độ dài, ta thấy `username` được lấy thẳng từ request để kiểm tra, không đi qua sanitize hay gì filter gì hết, cộng thêm việc python có một vài cơ chế encode decode khá là magic nên mình lợi dụng chỗ này để exploit, có nhiều cách mà ở đây cho dễ thì mình dùng unicode
 
-![](https://hackmd.io/_uploads/HkJ53VPHn.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/173f60a2-117e-4a57-adf8-4aa75bde09f5)
 
 Trong python `\u` biểu thị cho unicode, tương tự với `\b` `\r` `\f` `\x`. Nhờ thằng này mà mình có thể craft được kí tự null kia, tại sao lại là null. Vì khi mysql gặp thằng này, nó sẽ auto bỏ qua mà không xử lí (hoặc khi python gọi query chỗ này cộng thêm có byte null rồi đi vô sql server thì sẽ bỏ qua, chỗ này mình sẽ phải debug lại để hiểu hơn)
 
-![](https://hackmd.io/_uploads/H1pr64vH2.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/bc5a68f9-97eb-4086-a7f2-f7f528456042)
 
-![](https://hackmd.io/_uploads/B18vpNDHh.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/7cc16d89-588c-451a-bc8a-96faadbc828e)
 
 Lúc này username ta bypass được chỗ kiểm tra độ dài là 4 và lưu trong db là `cc` chỉ có 2 mà thôi, ez login
 
-![](https://hackmd.io/_uploads/H1VCaNvSn.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/18ffbed4-eb60-4092-870f-ff8b5fe8560d)
 
 
 # Notes
@@ -403,11 +403,11 @@ Tóm lại những việc cần làm của mình để exploit bài này như sa
 
 - Đầu tiên thì ta tạo account, tạo tên gì cũng được miễn đúng định dạng như code yêu cầu
 
-![](https://hackmd.io/_uploads/HyDFQrwHn.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/d7041844-f3ea-4aad-b7ff-3f7d1e6ba9e6)
 
 - Vô endpoint share để nó append cái csrf token vào list, lấy cái token đó ra
 
-![](https://hackmd.io/_uploads/HJHgrSwS3.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/06bae7d8-55f0-446b-bde7-c920be71f5d4)
 
 - Tạo payload exploit csrf
 
@@ -424,7 +424,6 @@ Tóm lại những việc cần làm của mình để exploit bài này như sa
 
 - Host lên và gửi cho bot, đợi vài giây cho nó request và check lại trong note của ta là thấy phờ lác
 
-![](https://hackmd.io/_uploads/SydoBHDS3.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/733d52b4-0221-4ec0-a308-0b889d6de595)
 
-
-![](https://hackmd.io/_uploads/SJJ7UBvr2.png)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/b702d67c-f37d-4c7c-9ff6-8a5d87cde5b4)
