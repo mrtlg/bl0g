@@ -14,9 +14,7 @@ Tuần này mình cũng có một buổi tối hơi hơi rảnh nên vào chơi 
 
 # `urmombotnetdotnet.com`
 
-> During my databases class, my group and I decided we'd create a web app with the domain urmombotnetdotnet.com, and wrote the relevant code. At first glance, it looks pretty good! I'd say we were pretty thorough. But were we thorough enough??
-
-> Oh... we also forgot to make the front end :)
+![image](https://github.com/mrtlg/bl0g/assets/110890291/294dd5c2-15cb-423d-a452-16e56884fee7)
 
 Đây là một bài viết bằng Flask có multi-flag, nghĩa là có nhiều chỗ để ta exploit, ban đầu mình cũng tưởng sẽ exploit kiểu theo các lỗ hổng thuần web thôi, nhưng khi đọc qua source thì bài này nó bật debug on, và các flag được ẩn trong các comment như này
 
@@ -249,6 +247,8 @@ Lúc này username ta bypass được chỗ kiểm tra độ dài là 4 và lưu
 ![image](https://github.com/mrtlg/bl0g/assets/110890291/c09d8ec3-b326-4ba2-b800-27b81442605f)
 
 # Notes
+
+![image](https://github.com/mrtlg/bl0g/assets/110890291/011c8dee-3289-4dc3-917d-fd3a36f46b6b)
 
 Bài này cho source và một url tới admin bot và source của bot luôn -> client side, đây cũng là bài cuối của mảng Web. Cùng phân tích vài chỗ quan trọng trong source.
 
